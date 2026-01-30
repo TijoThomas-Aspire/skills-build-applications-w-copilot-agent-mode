@@ -1,72 +1,86 @@
+:root{
+  --bg-start: #f5f7ff;
+  --bg-end: #e6fbff;
+  --brand-light: #00b4d8;
+  --brand-dark: #0077b6;
+  --accent: #6610f2;
+  --muted: #6c757d;
+  --text: #0f172a;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  background: linear-gradient(90deg, var(--brand-dark), var(--accent));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar .navbar-brand, .navbar .nav-link {
+  color: #fff !important;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .nav-link {
+  color: rgba(255,255,255,0.9) !important;
 }
 
-.container {
-  max-width: 1000px;
+.navbar .nav-link:hover { color: #f8f9fa !important; }
+
+h1, h2, h3, h4, h5 {
+  color: var(--brand-dark);
 }
+
+a { color: var(--brand-dark); }
+
+a:hover { color: var(--brand-light); }
 
 .card {
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(10, 10, 30, 0.06);
 }
 
-.table-responsive {
-  margin-top: 8px;
+.card-header {
+  background: linear-gradient(90deg, var(--brand-light), var(--brand-dark));
+  color: #fff;
+  border-bottom: none;
 }
 
-pre {
-  background: #f8f9fa;
-  padding: 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+.table thead th {
+  background: linear-gradient(90deg, rgba(102,16,242,0.08), rgba(0,180,216,0.06));
+  color: var(--brand-dark);
 }
+
+.table tbody tr:hover { background: rgba(0,0,0,0.02); }
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--brand-dark), var(--accent));
+  border-color: rgba(0,0,0,0.08);
+}
+
+.btn-outline-secondary {
+  background: rgba(255,255,255,0.9);
+  border-color: rgba(0,0,0,0.06);
+}
+
+.table-responsive { margin-top: 8px; }
+
+pre { background: #f8f9fa; padding: 12px; border-radius: 4px; font-size: 0.9rem; }
 
 /* Modal overlay tweaks to work without Bootstrap JS */
-.modal-backdrop.show {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 1040;
-}
-
-.modal.show.d-block {
-  z-index: 1050;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.modal-backdrop.show { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.5); z-index: 1040; }
+.modal.show.d-block { z-index: 1050; }

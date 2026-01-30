@@ -12,7 +12,10 @@ function App() {
   return (
     <div className="container mt-3">
       <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3">
-        <a className="navbar-brand" href="/">OctoFit Tracker</a>
+        <a className="navbar-brand d-flex align-items-center" href="/">
+          <img src="/octofitapp-small.svg" alt="OctoFit" className="brand-logo mr-2" />
+          <span>OctoFit Tracker</span>
+        </a>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item"><Link className="nav-link" to="/activities">Activities</Link></li>
