@@ -4,11 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { API_BASE } from './api';
+
+console.log('[index] REACT_APP_CODESPACE_NAME =', process.env.REACT_APP_CODESPACE_NAME);
+console.log('[index] API_BASE =', API_BASE);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
