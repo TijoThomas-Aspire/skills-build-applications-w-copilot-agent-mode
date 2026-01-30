@@ -28,6 +28,40 @@
   color: #61dafb;
 }
 
+.container {
+  max-width: 1000px;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.table-responsive {
+  margin-top: 8px;
+}
+
+pre {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Modal overlay tweaks to work without Bootstrap JS */
+.modal-backdrop.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1040;
+}
+
+.modal.show.d-block {
+  z-index: 1050;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
